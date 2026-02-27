@@ -93,7 +93,7 @@ jobs:
           include_docker="${{ github.event.inputs.include_docker }}"
           luci_version="${{ github.event.inputs.luci_version }}"
           echo "Building for profile: $profile"
-          sed -i 's/downloads.immortalwrt.org/mirror.nju.edu.cn\/immortalwrt/g' /home/build/immortalwrt/repositories.conf
+          
           docker run --rm -i \
             --user root \
             -v "${{ github.workspace }}/bin:/home/build/immortalwrt/bin" \
